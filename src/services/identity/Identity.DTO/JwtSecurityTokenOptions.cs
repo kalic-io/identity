@@ -7,17 +7,12 @@ namespace Identity.DTO
     /// <summary>
     /// Wraps JWT Token metadata (validity, issuer, ...)
     /// </summary>
-    public sealed class JwtInfos
+    public sealed class JwtSecurityTokenOptions
     {
         /// <summary>
-        /// Access token validaty (in minutes)
+        /// token lifetime (in minutes)
         /// </summary>
-        public double AccessTokenValidity { get; set; }
-
-        /// <summary>
-        /// Refresh token validity in minutes
-        /// </summary>
-        public double RefreshTokenValidity { get; set; }
+        public double LifetimeInMinutes { get; set; }
 
         public string Key { get; set; }
 

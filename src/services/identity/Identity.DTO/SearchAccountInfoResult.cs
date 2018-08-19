@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Identity.DTO
 {
-    public class AccountInfo : Resource<Guid>
+    public class SearchAccountInfoResult : Resource<Guid>
     {
         public string Username { get; set; }
 
@@ -19,9 +21,5 @@ namespace Identity.DTO
         public string Name { get; set; }
 
         public Guid? TenantId { get; set; }
-
-        public IEnumerable<ClaimInfo> Claims { get; set; }
-
-        public AccountInfo() => Claims = Enumerable.Empty<ClaimInfo>();
     }
 }
