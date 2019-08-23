@@ -302,6 +302,7 @@ namespace Identity.API.Features.Accounts
         [HttpHead("/search")]
         public async Task<IActionResult> Search([BindRequired, FromQuery] SearchAccountInfo search, CancellationToken ct = default)
         {
+        
             search.PageSize = Math.Min(search.PageSize, _apiOptions.Value.MaxPageSize);
             IList<IFilter> filters = new List<IFilter>();
 
